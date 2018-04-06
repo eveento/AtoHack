@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <script type="text/javascript" src="JS/script.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<form class="main" >
+  <form class="checkLang"id="main1" method="POST">
+    <div class="checkLang" id="main1">
+     <input type="checkbox" id="checkboxPython" name="Python" value="1" class="main2">
+     <label for="checkboxPython">Python</label></br>
+
+      <input type="checkbox" id="checkboxJava" name="Java" value="2" class="main2">
+      <label for="checkboxJava">Java</label></br>
+
+      <input type="checkbox" id="checkboxC" name="C" value="3" class="main2">
+      <label for="checkboxC">C</label></br>
+
+      <input type="checkbox" id="checkboxCpp" name="Cpp" value="4" class="main2">
+      <label for="checkboxC">Cpp</label></br>
+
+      <input type="checkbox" id="checkboxSQL" name="SQL" value="5" class="main2">
+      <label for="checkboxSQL">SQL</label></br>
+
+      <div id="mainParam">
+      </div>
+
+    <div>
+      <input type="text" name="textBox" value="1" class="upload" id="textBox1" size="12"/> 
+      <input type="button" value="Add" onclick="addObject('mainParam');" /> 
+
+      <button type="submit" id="createJSON" onclick="sendJSON();">Send</button>
+      <button type="reset" value="wartość" onclick="resett();"/>Reset</button>
+    </div>
+  </form>
+</form>
+
+</body>
+</html>
