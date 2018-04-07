@@ -19,3 +19,24 @@
          margin-left: auto; 
          margin-right: auto;
     }
+
+    #tabela{
+        background: rgb(83, 21, 21);
+        border: 1px solid #AAAAAA;
+        padding: 10px;
+        color: rgb(226, 158, 158);
+        width: 350px;
+        margin-left: auto; 
+        margin-right: auto;
+        visibility: hidden;
+    }
+    #tabela1{
+        background: rgb(83, 21, 21);
+        border: 1px solid #AAAAAA;
+        padding: 20px;
+        color: rgb(226, 158, 158);
+        width: 450px;
+        margin-left: auto; 
+        margin-right: auto;
+        visibility: visible;
+    }
