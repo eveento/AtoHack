@@ -4,20 +4,11 @@
         border: 1px solid #AAAAAA;
         padding: 10px;
         color: #fff;
-        width: 100px;
+        width: 150px;
         margin-left: auto; 
         margin-right: auto;
     }
 
-    .checkLang1{
-        background: #000;
-        border: 1px solid #AAAAAA;
-        padding: 10px;
-        color: #fff;
-        width: 100px;
-        margin-left: auto; 
-        margin-right: auto;
-    }
     input.upload { 
         
     }

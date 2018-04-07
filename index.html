@@ -5,9 +5,8 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </head>
 <body>
-<form class="main" >
-  <form class="checkLang"id="main1" method="POST">
-    <div class="checkLang" id="main1">
+  <form class="checkLang" id="form1" method="POST"> 
+    <div id="main1">
      <input type="checkbox" id="checkboxPython" name="Python" value="1" class="main2">
      <label for="checkboxPython">Python</label></br>
 
@@ -30,11 +29,40 @@
       <input type="text" name="textBox" value="1" class="upload" id="textBox1" size="12"/> 
       <input type="button" value="Add" onclick="addObject('mainParam');" /> 
 
-      <button type="submit" id="createJSON" onclick="sendJSON();">Send</button>
+      <button type="submit" id="createJSON">Send</button>
       <button type="reset" value="wartość" onclick="resett();"/>Reset</button>
     </div>
-  </form>
 </form>
 
+<script>
+  $( "#form1" ).submit(function( event ) { 
+    event.preventDefault();
+    var ar=[];
+    console.log($('.main2'));
+            $('.main2').each(function(){
+                if($(this).is(':checked'))
+                {
+                    
+                    ar.push({
+                        language:$(this).attr('name')
+                    
+                    });                    
+                }        
+            });
+            console.log(ar);
+            $.ajax({
+                method: "POST",
+                url: "http://localhost:8887",
+                data: JSON.stringify(ar),
+            })
+            .done(function( msg ) {
+                alert( "Data Saved: " + msg );
+              })    
+            .fail(function() {
+                alert( "error" );
+              })         
+  });
+
+</script>
 </body>
 </html>
