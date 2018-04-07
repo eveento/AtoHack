@@ -81,6 +81,7 @@
       });
       console.log(ar);
       $.ajax({
+        contentType :'application/json; charset=ISO-8859-1',
           method: "POST",
           url: "http://localhost:8887",
           data: JSON.stringify(ar),
